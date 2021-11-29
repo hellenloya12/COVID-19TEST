@@ -1,0 +1,29 @@
+import matplotlib
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn import datasets, linear_model
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, r2_score
+import random
+from sklearn.preprocessing import PolynomialFeatures
+import operator
+import random
+from scipy import stats
+import numpy as np
+import pandas as pd
+from sklearn.tree import DecisionTreeClassifier # Import Decision Tree Classifier
+from sklearn.model_selection import train_test_split # Import train_test_split function
+from sklearn import metrics #Import scikit-learn metrics module for accuracy calculation
+from sklearn.preprocessing import StandardScaler
+import time
+import datetime
+from imblearn.over_sampling import SMOTE
+from sklearn.model_selection import train_test_split
+from sklearn import tree
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.metrics import matthews_corrcoef, confusion_matrix
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+#Load Dataset
+Cov = pd.read_csv("D:\\Documents\\RMexicoData\\df_Mexico.csv")
