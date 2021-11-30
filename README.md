@@ -3,8 +3,6 @@ Epidemiology is the scientific discipline that studies the determinants of healt
 ## Binary Logistic Regression Model
 Suppose the response variable Y assumes only two values which can be coded as 0 or 1. 0 is a negative COVID-19 result and 1 is a positive COVID-19 result. This type of variable is therefore termed binary. A binary logistic regression models the probability that the response, Y , is positive. 
 
-
-
 **Confusion Matrix for Binary Probit Regression Model**
 
 | **Correctly Classified** | **33866** | **64%** |
@@ -16,7 +14,15 @@ Suppose the response variable Y assumes only two values which can be coded as 0 
 | Accuracy | Precision | MCC |
 | --- | --- | --- |
 | 64% | 36% | 25% |
+
+**Logistic Regression Summary table**
+
+![image](https://user-images.githubusercontent.com/32992857/144142228-0b34e92f-0edf-46ea-82cb-e4db3080b65d.png)
+
+From the Summary table of the logistic regression model we observed that Intubated,  Lan_Indig, Diabetes, EPOC, Asthma, Hypertension, Chronic_Renal, Tobacco were not significant predictors since their p value was greater than 0.05 and were therefore removed from the model before calculating the confusion matrix.
+
 ## Binary Probit Regression Model
+Probit model is often used as an alternative to a binary logistic regression. In the Probit model, the probability \pi=P(Y=1) is regressed on a set of predictors x_1,\ \ldots,\ x_k through the following relation:
 ## Binary Complementary Log-log Model
 ## Random Forest 
 ## Artificial Neural Network
