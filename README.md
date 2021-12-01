@@ -23,6 +23,8 @@ From the Summary table of the logistic regression model we observed that Intubat
 
 ## Binary Probit Regression Model
 Probit model is often used as an alternative to a binary logistic regression. In the Probit model, the probability \pi=P(Y=1) is regressed on a set of predictors x_1,\ \ldots,\ x_k through the following relation:
+
+![image](https://user-images.githubusercontent.com/32992857/144289803-ce883878-6b6f-4769-b312-9a9c43ee727e.png)
 ## Binary Complementary Log-log Model
 ## Random Forest 
 ## Artificial Neural Network
