@@ -1,5 +1,9 @@
 # COVID-19TEST
 Epidemiology is the scientific discipline that studies the determinants of health-related states or events in specified populations. Classical methods of Epidemiology such as modeling assumptions become difficult to achieve with large scale-datasets, however, machine learning has the potential to answer these questions. In this thesis, we illustrate the effectiveness of machine learning to forecast and classify in the fields of Environmental Epidemiology and Health Epidemiology. The same pre-existing conditions that increase mortality rates of COVID-19 are the same diseases that are also affected by long-term exposure to air pollution. Low-income populations suffer the most from air pollution disparity and are often burdened with long-term health effects. It is with the utmost importance that we continue investigating the relationship between air pollution and health to enforce existing air pollution regulations and ensure the protection of human health both during and after the COVID-19 pandemic. To study the relation of COVID-19 and air pollution we propose a refined data collection that uses Particulate Matter data and Mexico’s COVID-19 cases public dataset. We approach the classification of COVID-19 diagnosis by using three traditional generalized linear regression models (logistic, probit, and complementary log-log) and two machine learning techniques (random forest classifier and artificial neural network). We use Python to produce the COVID-19 diagnoses classifiers.
+## Data Introduction
+
+## Data Cleaning and Resampling
+
 ## Binary Logistic Regression Model
 Suppose the response variable Y assumes only two values which can be coded as 0 or 1. 0 is a negative COVID-19 result and 1 is a positive COVID-19 result. This type of variable is therefore termed binary. A binary logistic regression models the probability that the response, Y , is positive. 
 
@@ -88,10 +92,7 @@ By default, the number of trees in the forest is 100. The greater the number of 
 
 <img src="https://user-images.githubusercontent.com/32992857/144294720-63732156-8ef3-42a9-b7d5-370c53ec6cc8.png" width="400" height="600">
 
-The features from the Mexico COVID-19 dataset are used to predict the class COVID-19 diagnosis. The COVID-19 diagnosis is predicted in the output node. In the neural network, the input layer and the three hidden layers were given the activation function ‘Relu’, to increase efficiency. Adding more hidden layers allows the complexity of the classification functions to be found. The output node had the sigmoid function to ensure that the ANN output classifies the class into 0 or 1.  Since the ANN is classifying a binary output,we used the binary cross-entropy loss function.Keras uses Stochastic Gradient Descent when running the artificial neural network. We added a variance calculation of each updated weight to determine which predictors were the most important in the model and obtained results of the most important predictors being Sex, Hos_Clin, Pneumonia, Pregnant, Lan_Indig, Diabetes, Asthma, Hypertension, Obesity, Tobacco. 
-
-To evaluate the model accuracy, a confusion matrix was calculated, with the following results:
-
+The features from the Mexico COVID-19 dataset are used to predict the class COVID-19 diagnosis. The COVID-19 diagnosis is predicted in the output node. In the neural network, the input layer and the three hidden layers were given the activation function ‘Relu’, to increase efficiency. Adding more hidden layers allows the complexity of the classification functions to be found. The output node had the sigmoid function to ensure that the ANN output classifies the class into 0 or 1.  Since the ANN is classifying a binary output,we used the binary cross-entropy loss function.Keras uses Stochastic Gradient Descent when running the artificial neural network. We added a variance calculation of each updated weight to determine which predictors were the most important in the model and obtained results of the most important predictors being Sex, Hos_Clin, Pneumonia, Pregnant, Lan_Indig, Diabetes, Asthma, Hypertension, Obesity, Tobacco. To evaluate the model accuracy, a confusion matrix was calculated, with the following results:
 
 **Confusion Matrix for Artificial Neural Network**
 
@@ -108,3 +109,12 @@ To evaluate the model accuracy, a confusion matrix was calculated, with the foll
 
 ## Conclusion
 
+Ultimately, by comparing all the algorithm results, we can see that random forests had the highest accuracy and precision as shown in the barplot below:
+
+![image](https://user-images.githubusercontent.com/32992857/144297762-532eaaa1-e117-4079-ab22-7048bdea9b2a.png)
+
+However, the feature importances of each algorithm differed. The three generalized linear models showed similar importance in predictors. But the two machine learning techniques were more variable. The table below compares the important features of each algorithm. 
+
+![image](https://user-images.githubusercontent.com/32992857/144297895-0b625ed9-6f21-4a76-8ad0-11520dfbb91a.png)
+
+From the table above we can see that the Features Sex, Hos_Clin, Pneumonia, Immuno, Cardiovascular, Obesity, Contact_Covid, ICU, and PM2.5 are important in each algorithm. Therefore demonstrating that particulate matter affects positive COVID-19 test results. 
