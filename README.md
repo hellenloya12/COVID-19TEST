@@ -3,6 +3,12 @@ Epidemiology is the scientific discipline that studies the determinants of healt
 ## Binary Logistic Regression Model
 Suppose the response variable Y assumes only two values which can be coded as 0 or 1. 0 is a negative COVID-19 result and 1 is a positive COVID-19 result. This type of variable is therefore termed binary. A binary logistic regression models the probability that the response, Y , is positive. 
 
+**Logistic Regression Summary table**
+
+![image](https://user-images.githubusercontent.com/32992857/144290139-a4dc3dbd-4d17-40ab-acac-1608e2f14ba1.png)
+
+From the Summary table of the logistic regression model we observed that Intubated,  Lan_Indig, Diabetes, EPOC, Asthma, Hypertension, Chronic_Renal, Tobacco were not significant predictors since their p value was greater than 0.05 and were therefore removed from the model before calculating the confusion matrix.
+
 **Confusion Matrix for Binary Probit Regression Model**
 
 | **Correctly Classified** | **33866** | **64%** |
@@ -15,16 +21,23 @@ Suppose the response variable Y assumes only two values which can be coded as 0 
 | --- | --- | --- |
 | 64% | 36% | 25% |
 
-**Logistic Regression Summary table**
-
-![image](https://user-images.githubusercontent.com/32992857/144290139-a4dc3dbd-4d17-40ab-acac-1608e2f14ba1.png)
-
-From the Summary table of the logistic regression model we observed that Intubated,  Lan_Indig, Diabetes, EPOC, Asthma, Hypertension, Chronic_Renal, Tobacco were not significant predictors since their p value was greater than 0.05 and were therefore removed from the model before calculating the confusion matrix.
 
 ## Binary Probit Regression Model
 Probit model is often used as an alternative to a binary logistic regression. In the Probit model, the probability \pi=P(Y=1) is regressed on a set of predictors x_1,\ \ldots,\ x_k through the following relation:
 
+**Probit Regression Summary table**
+
 ![image](https://user-images.githubusercontent.com/32992857/144289803-ce883878-6b6f-4769-b312-9a9c43ee727e.png)
+
+From the Summary table of the Probit model we observe Sex, Hos_Clin, Pneumonia, Nationality, Pregnant, Immuno, Obesity, Contact_Covid, ICU, PM10, PM2.5, and difference are statistically significant since their p value was less than 0.05. The insignificant features Intubated,  Lan_Indig, Diabetes, EPOC, Asthma, Hypertension, Chronic_Renal, Tobacco were therefore removed from the model before calculating the confusion matrix. 
+
 ## Binary Complementary Log-log Model
+
+**Complementary Log-log Regression Summary table**
+
+![image](https://user-images.githubusercontent.com/32992857/144290691-80d8f46b-29bc-4928-85ee-3995d074a215.png)
+
+From the Summary table of Complementary Log-Log we observe Sex, Hos_Clin, Pneumonia, Nationality, Pregnant, Immuno, Obesity, Contact_Covid, ICU, PM10, PM2.5, and difference are statistically significant since their p value was less than 0.05. The insignificant features Intubated,  Lan_Indig, Diabetes, EPOC, Asthma, Hypertension, Chronic_Renal, Tobacco were therefore removed from the model before calculating the confusion matrix. 
+
 ## Random Forest 
 ## Artificial Neural Network
