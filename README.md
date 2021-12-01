@@ -17,7 +17,7 @@ Suppose the response variable Y assumes only two values which can be coded as 0 
 
 **Logistic Regression Summary table**
 
-![image](https://user-images.githubusercontent.com/32992857/144142228-0b34e92f-0edf-46ea-82cb-e4db3080b65d.png)
+![image](https://user-images.githubusercontent.com/32992857/144290139-a4dc3dbd-4d17-40ab-acac-1608e2f14ba1.png)
 
 From the Summary table of the logistic regression model we observed that Intubated,  Lan_Indig, Diabetes, EPOC, Asthma, Hypertension, Chronic_Renal, Tobacco were not significant predictors since their p value was greater than 0.05 and were therefore removed from the model before calculating the confusion matrix.
 
