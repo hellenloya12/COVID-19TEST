@@ -3,7 +3,7 @@ Epidemiology is the scientific discipline that studies the determinants of healt
 ## Data Introduction
 
 ## Data Cleaning and Resampling
-
+An unbalanced dataset has one class represented better than the other classes. Since the Mexico COVID-19 dataset had a larger number of negative COVID-19 cases than positive ones, the data were highly unbalanced as demonstrated by the bar chart below.
 ## Binary Logistic Regression Model
 Suppose the response variable Y assumes only two values which can be coded as 0 or 1. 0 is a negative COVID-19 result and 1 is a positive COVID-19 result. This type of variable is therefore termed binary. A binary logistic regression models the probability that the response, Y , is positive. 
 
