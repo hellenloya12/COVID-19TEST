@@ -69,7 +69,7 @@ From the Summary table of Complementary Log-Log we observe Sex, Hos_Clin, Pneumo
 A Random Forest is a combination of a series of decision tree structure classifiers. Based on their COVID-19 results, the Random Forest Algorithm was applied to Mexico’s COVID-19 data. To evaluate which predictors were important we used the Sklearn package and called on feature importance. We plotted the top 10 feature importances from the random forest algorithm as demonstrated in the plot below. 
 By default, the number of trees in the forest is 100. The greater the number of tree splits, the more information the random forest captures about the dataset. However, if the maximum depth is too high it can increase overfitting. Therefore, knowing these limitations, by trial and error,  we set the maximum depth of each tree to 6. The top 10 important features were Sex, Intubated, PM2.5, Pneumonia, Tobacco, PM10, Lan_Indig, Cardiovascular, ICU. 
 
-<img src="https://user-images.githubusercontent.com/32992857/144293987-a495b2b9-7a4d-4d8a-b24a-5cf266df3cd6.png" width="400" height="200">
+<img src="https://user-images.githubusercontent.com/32992857/144293987-a495b2b9-7a4d-4d8a-b24a-5cf266df3cd6.png" width="600" height="400">
 
 **Confusion Matrix for Random Forest Model**
 
@@ -87,3 +87,24 @@ By default, the number of trees in the forest is 100. The greater the number of 
 ## Artificial Neural Network
 
 <img src="https://user-images.githubusercontent.com/32992857/144294720-63732156-8ef3-42a9-b7d5-370c53ec6cc8.png" width="400" height="600">
+
+The features from the Mexico COVID-19 dataset are used to predict the class COVID-19 diagnosis. The COVID-19 diagnosis is predicted in the output node. In the neural network, the input layer and the three hidden layers were given the activation function ‘Relu’, to increase efficiency. Adding more hidden layers allows the complexity of the classification functions to be found. The output node had the sigmoid function to ensure that the ANN output classifies the class into 0 or 1.  Since the ANN is classifying a binary output,we used the binary cross-entropy loss function.Keras uses Stochastic Gradient Descent when running the artificial neural network. We added a variance calculation of each updated weight to determine which predictors were the most important in the model and obtained results of the most important predictors being Sex, Hos_Clin, Pneumonia, Pregnant, Lan_Indig, Diabetes, Asthma, Hypertension, Obesity, Tobacco. 
+
+To evaluate the model accuracy, a confusion matrix was calculated, with the following results:
+
+
+**Confusion Matrix for Artificial Neural Network**
+
+| **Correctly Classified**   | **34306** | **65%** |
+| -------------------------- | --------- | ------- |
+| **Incorrectly Classified** | 18291     | 35%     |
+
+**Artificial Neural Network Model Metric evaluators**
+
+| Accuracy | Precision | MCC |
+| -------- | --------- | --- |
+| 65%      | 62%       | 29% |
+
+
+## Conclusion
+
