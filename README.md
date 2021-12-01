@@ -4,6 +4,11 @@ Epidemiology is the scientific discipline that studies the determinants of healt
 
 ## Data Cleaning and Resampling
 An unbalanced dataset has one class represented better than the other classes. Since the Mexico COVID-19 dataset had a larger number of negative COVID-19 cases than positive ones, the data were highly unbalanced as demonstrated by the bar chart below.
+
+![image](https://user-images.githubusercontent.com/32992857/144300564-52a95c80-6ad8-417f-a108-e8e99671b644.png)
+
+ We applied a type of data augmentation referred to as Synthetic Minority Oversampling Technique or SMOTE. Having a bias toward positive COVID-19 cases doesn’t allow effective learning of the model’s decision boundary.  To address this issue, SMOTE oversamples the minority class which in this case is the positive COVID-19 result. First, we split the dataset into a training set and a testing set for cross-validation. With the testing size being 20% of the data and the training set being 80% of the data. After that, we fit the SMOTE algorithm to resample the data. 
+ 
 ## Binary Logistic Regression Model
 Suppose the response variable Y assumes only two values which can be coded as 0 or 1. 0 is a negative COVID-19 result and 1 is a positive COVID-19 result. This type of variable is therefore termed binary. A binary logistic regression models the probability that the response, Y , is positive. 
 
