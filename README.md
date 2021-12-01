@@ -85,3 +85,5 @@ By default, the number of trees in the forest is 100. The greater the number of 
 | 66%      | 58%       | 28% |
 
 ## Artificial Neural Network
+
+![image](https://user-images.githubusercontent.com/32992857/144294720-63732156-8ef3-42a9-b7d5-370c53ec6cc8.png)
